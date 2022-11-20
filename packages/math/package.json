@@ -1,0 +1,14 @@
+{
+  "name": "math",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsup ./index.ts --format cjs --dts",
+    "dev": "npm run build --watch"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "tsup": "^6.5.0"
+  }
+}

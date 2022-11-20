@@ -3,23 +3,27 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "apps/*",
     "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-bump": "npx changeset version",
+    "publish-packages": "npx changeset publish"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
     "prettier": "latest",
+    "tsup": "^6.5.0",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
-  "packageManager": "npm@8.19.2"
+  "packageManager": "npm@8.19.2",
+  "dependencies": {
+    "@changesets/cli": "^2.25.2"
+  }
 }
